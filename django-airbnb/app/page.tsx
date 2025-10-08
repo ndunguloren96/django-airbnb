@@ -1,11 +1,14 @@
-import Image from "next/image";
+import Categories from "./components/Categories";
+import PropertyList from "./components/properties/PropertyList";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <footer className="">
+  <main className="max-w-[1500px] mx-auto px-6">
+    <Categories />
 
-      </footer>
+    <div className="mt-4 overflow-x-auto max-w-[1500px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <PropertyList/>
     </div>
+  </main>
   );
 }
