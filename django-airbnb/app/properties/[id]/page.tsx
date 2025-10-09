@@ -28,7 +28,7 @@ const PropertyDetailPage = () => {
                             src="/profile.png"
                             width={50}
                             height={50}
-                            className="rounded-full"
+                            className="rounded-full w-[50px] h-[50px] object-cover"
                             alt="Profile Picture"
                         />
 
