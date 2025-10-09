@@ -1,9 +1,10 @@
 import Image from "next/image";
+import ReservationSidebar from "@/app/components/properties/ReservationSidebar";
 
 const PropertyDetailPage = () => {
     return (
-        <main className="max-w-[1500px] mx-auto px-6">
-            <div className="w-full h-[64vh] overflow-hidden rounded-xl relative">
+        <main className="pb-6 max-w-[1500px] mx-auto px-6">
+            <div className="mt4 w-full h-[64vh] overflow-hidden rounded-xl relative">
                 <Image
                     fill
                     src="/beach-2.jpg"
@@ -12,7 +13,7 @@ const PropertyDetailPage = () => {
                 />
             </div>
 
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-5 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
                 <div className="py-6 pr-6 col-span-3">
                     <h1 className="mb-4 text-4xl">Property name</h1>
 
@@ -20,10 +21,6 @@ const PropertyDetailPage = () => {
                         4 guest - 2 beadrooms - 1 bathroom
                     </span>
 
-                    <hr />
-                    <hr />
-                    <hr />
-                    <hr />
                     <hr />
 
                     <div className="py-6 flex items-center space-x-4">
@@ -36,19 +33,17 @@ const PropertyDetailPage = () => {
                         />
 
                         <p><strong>Loren</strong> is your host</p>
+                     </div>                        
     
-                        <hr />
-                        <hr />
+                     <hr />
     
-                        <p className="mt-6 text-lg">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                    </div>
+                     <p className="mt-6 text-lg">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                     </p>
                 </div>
 
-                <div className="col-span-2">
-                 right
-                </div>
+                <ReservationSidebar/>
+
             </div>
         </main>
     )
