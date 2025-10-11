@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
+import Modal from "./components/modals/Modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const content = (
-    <p>Yo yo</p>
+    <p>Testing</p>
   )
 
   return (
@@ -27,6 +28,13 @@ export default function RootLayout({
         <div className="pt-32">
           {children}
         </div>
+
+        <Modal
+            label="Modal test"
+            content={content}
+            isOpen={false}
+        />
+        
 
       </body>
     </html>
