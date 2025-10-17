@@ -1,12 +1,19 @@
 import Image from "next/image";
+import { PropertiesType } from "./PropertyList";
 
-const PropertyListItem = () => {
+interface PropertiesProps {
+    properties: PropertiesType
+}
+
+const PropertyListItem: React.FC<PropertyProps> = ({
+    properties
+}) => {
     return(
     <div className="cursor-pointer"> 
         <div className="flex relative overflow-hidden aspect-square rounded-xl">
             <Image
                 fill
-                src="/beach-1.jpg"
+                src={properties.image_url}
                 alt="Beach House"
                 sizes="(max-width: 768px) 768px, (max-width: 1200px): 768px, 768px"
                 className="hover:scale-110 object-cover transition h-full w-full"
@@ -14,11 +21,11 @@ const PropertyListItem = () => {
         </div>
 
         <div className="mt-2">
-            <p className="text-lg font-bold">Property Name</p>
+            <p className="text-lg font-bold">{properties.title}</p>
         </div>
 
         <div className="mt-2">
-            <p className="text-sm text-gray-500"><strong>$210</strong> per night</p>
+            <p className="text-sm text-gray-500"><strong>Ksh {properties.price_per_night}</strong> per night</p>
         </div>
     </div>
     )
